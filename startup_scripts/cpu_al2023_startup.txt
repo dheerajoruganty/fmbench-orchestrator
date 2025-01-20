@@ -40,7 +40,8 @@ rm /home/ec2-user/Miniconda3-latest-Linux-x86_64.sh
 /home/ec2-user/miniconda3/bin/conda create --name fmbench_python311 -y python=3.11 ipykernel
 # Activate the environment and install fmbench
 source /home/ec2-user/miniconda3/bin/activate fmbench_python311
-pip install -U fmbench
+pip install uv
+uv pip install -U fmbench
 
 # Add ec2-user to the docker group and reload group memberships
 sudo usermod -a -G docker $USER

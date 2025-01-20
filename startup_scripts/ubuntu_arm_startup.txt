@@ -41,7 +41,8 @@ rm /home/ubuntu/Miniconda3-latest-Linux-aarch64.sh
 
 # Activate the environment and attempt to install fmbench
 source /home/ubuntu/miniconda3/bin/activate fmbench_python311
-pip install -U fmbench
+pip install uv
+uv pip install -U fmbench
 
 # Add ubuntu user to the docker group and reload group memberships
 sudo usermod -a -G docker $USER

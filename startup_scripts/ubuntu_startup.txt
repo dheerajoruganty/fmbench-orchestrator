@@ -40,7 +40,8 @@ rm /home/ubuntu/Miniconda3-latest-Linux-x86_64.sh
 /home/ubuntu/miniconda3/bin/conda create --name fmbench_python311 -y python=3.11 ipykernel
 # Activate the environment and install fmbench
 source /home/ubuntu/miniconda3/bin/activate fmbench_python311
-pip install -U fmbench
+pip install uv
+uv pip install -U fmbench
 
 sudo usermod -a -G docker $USER
 newgrp docker
